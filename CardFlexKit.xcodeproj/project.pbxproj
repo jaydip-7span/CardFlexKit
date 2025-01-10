@@ -13,6 +13,9 @@
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		63BBC9A02D31158A009910EE /* Exceptions for "CardFlexKit" folder in "CardFlexKit" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				Assets.xcassets = (ios, );
+			};
 			publicHeaders = (
 				CardFlexKit.h,
 			);

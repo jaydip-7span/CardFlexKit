@@ -1,6 +1,0 @@
-framework module CardFlexKit {
-  umbrella header "CardFlexKit.h"
-  export *
-
-  module * { export * }
-}
