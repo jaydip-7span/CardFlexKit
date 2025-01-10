@@ -16,9 +16,14 @@ Pod::Spec.new do |spec|
 
  
   spec.source       = { :git => "https://github.com/jaydip-7span/CardFlexKit.git", :tag => "#{spec.version}" }
-  spec.source_files  = "CardFlexKit", "CardFlexKit/**/*.{h,m,swift}"
+  spec.source_files  = "CardFlexKit", "CardFlexKit/**/*.{h,m,swift,xcassets}"
 spec.osx.deployment_target = nil
    spec.public_header_files = "CardFlexKit/**/*.h"
+
+ #spec.resource = "CardFlexKit/Assets/**/*.{png,jpg,xcassets,storyboard,xib,json,plist}"
+#spec.resources = ['CardFlexKit/Assets/*.{xcassets}']
+
+
 spec.requires_arc = true
 spec.swift_version = '5.0'
 spec.platform     = :ios, "16.0"
