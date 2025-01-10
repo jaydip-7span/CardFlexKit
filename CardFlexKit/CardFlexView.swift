@@ -224,7 +224,7 @@ public struct CardFlexAnimationView: View {
             HStack(spacing: 20) {
                 Image("chip",bundle: Bundle(identifier: "-Span.CardFlexKit"))
                     .resizable()
-                    .frame(width: 50, height: 40)
+                    .frame(width: 50, height: 50)
                 Text(String(card.rawCardNumber.dummyData("*", count: 16, showDigit: true).prefix(19)))
                     .font(.title2)
             }
@@ -249,7 +249,7 @@ public struct CardFlexAnimationView: View {
             }
         }
         .padding()
-        .frame(height: 220)
+        .frame(height: 200)
         .monospaced()
         .contentTransition(.numericText())
         .background(cardVariant.color.gradient)
@@ -275,7 +275,7 @@ public struct CardFlexAnimationView: View {
                 }
         }
         .padding()
-        .frame(height: 220)
+        .frame(height: 200)
         .monospaced()
         .contentTransition(.numericText())
         .background(cardVariant.color.gradient)
