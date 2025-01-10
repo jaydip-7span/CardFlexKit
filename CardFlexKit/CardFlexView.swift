@@ -86,6 +86,7 @@ public struct CardFlexAnimationView: View {
     //MARK: Dynamic Property
     @Binding public var card: Card
     @State public var cardVariant: CardVariant
+    @State private var cardChip: String = String()
     
     //MARK: Private Property
     @FocusState private var activeField: ActiveField?
@@ -95,8 +96,9 @@ public struct CardFlexAnimationView: View {
     //MARK: Button Action
    public var onAction:()->()
 
-    public init(card: Binding<Card>, cardVariant: CardVariant, onAction: @escaping () ->()) {
+    public init(card: Binding<Card>, cardChip: String,cardVariant: CardVariant, onAction: @escaping () ->()) {
         self._card = card
+        self.cardChip = cardChip
         self._cardVariant = State(initialValue: cardVariant)
         self.onAction = onAction
     }
@@ -222,7 +224,7 @@ public struct CardFlexAnimationView: View {
             }
                 Spacer()
             HStack(spacing: 20) {
-                Image("chip",bundle: Bundle(identifier: "-Span.CardFlexKit"))
+                Image(cardChip)
                     .resizable()
                     .frame(width: 50, height: 50)
                 Text(String(card.rawCardNumber.dummyData("*", count: 16, showDigit: true).prefix(19)))
